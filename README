@@ -1,14 +1,16 @@
-=== Doctrine support for DATE_FORMAT and UNIX TIMESTAMP
+# Doctrine support for DATE_FORMAT and UNIX TIMESTAMP
+
 
 symfony2 install 
 
-
-    doctrine:
-       # ...
-        orm:
-            entity_managers:
-                default:
-                  dql:
-                      numeric_functions:
-                        date_format:       \UVd\DoctrineFunction\DateFormat
-                        unixtimestamp:     \UVd\DoctrineFunction\UnixTimestamp
+```yaml
+doctrine:
+  # ...
+  orm:
+    entity_managers:
+      default:
+        dql:
+          numeric_functions:
+            date_format:       \UVd\DoctrineFunction\DateFormat
+            unixtimestamp:     \UVd\DoctrineFunction\UnixTimestamp
+```
